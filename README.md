@@ -73,9 +73,15 @@ I mounted the NBM2317 on a makeshift breakout board and made a connection capabl
 ![](images/sxm4-running.jpg)
 *Everything is running*
 
+
 (The setup still needs to be tidyed up, fixing everything together, adding a 12V fuse and filtering caps)
 
 The Delta `GFC0812DS` counter-rotating fans are quite noisy and also draw a substantial amount of power, approximately 26W each when running at full RPM. Having two of these fans may seem excessive for dissipating the 400W TDP of the A100, especially considering their airflow of around 90CFM; but it should be noted that this board appears to be designed for testing purposes in a normal indoor environment, rather than in a chilling datacenter cold isle air. By flipping the #6 DIP switch, the adapter switches to a somewhat more adaptive cooling mode, where it keeps the fan RPMs and noise levels low during idle periods (the A100 consumes 50-70W while idling) and increases them under heavy loads. Nevertheless, to use this kind of setup in a personal workstation, it would make sense to convert the cooling system to a liquid-cooled one or replace the `GFC0812DS` fans with slightly larger and slower ones. 
+
+Putting my hearing protection on, I ran my setup at full power. Although the `A100-SXM4-40GB` is a power-hungry beast, my old 850W PSU held up, and the 'NBM2317' handled it pretty well, getting a little warm.
+
+![](images/sxm4-full-power-test.jpg)
+*Running at full power, measuring temps of NBM2317*
 
 ## Conclusion
 
